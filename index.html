@@ -1,48 +1,73 @@
----
-images:
-  - image_path: /images/1.jpg
-    caption: "Sunrise over Harbour / Dunedin, NZ"
-  - image_path: /images/2.jpg
-    caption: "Boy popping bubble / Dunedin, NZ"
-  - image_path: /images/3.jpg
-    caption: "Floating Market / Bangkok, Thailand"
-  - image_path: /images/4.jpg
-    caption: "Jeremy / Sydney, Australia"
-  - image_path: /images/6.jpg
-    caption: "Sunrise / Dunedin, NZ"
-  - image_path: /images/7.jpg
-    caption: "Bonney / London, UK"
-  - image_path: /images/5.jpg
-    caption: "The streets / Dunedin, NZ"
-  - image_path: /images/10016890156_822c57c966_k.jpg
-    caption: "Georgia / Dunedin, NZ"
-  - image_path: /images/8.jpg
-    caption: "Nugget point / Catlins, NZ"
-  - image_path: /images/9.jpg
-    caption: "The Ruby Lady / Dunedin, NZ"
-  - image_path: /images/10.jpg
-    caption: "Chloe / Dunedin, NZ"
-  - image_path: /images/11.jpg
-    caption: "The River Jesters / Christchurch, NZ"
-layout: default
-title: Mike Neumegen
-body_class: landing-page
----
-<!-- test00 -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
-<script src="https://malsup.github.io/jquery.cycle2.js"></script>
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>  Mike Neumegen </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="./css/boilerplate.css">
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
 
 
-<h1 class="editable"> Mike Neumegen </h1>
 
-<ul class="links">
-  <li><a target="_blank" href="http://cloudcannon.com">CloudCannon</a></li>
-  <li><a target="_blank" href="https://www.facebook.com/mikeneumegen">Photography</a></li>
-  <li><a target="_blank" href="https://twitter.com/mikeneumegen">Twitter</a></li>
-</ul>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
 
-<ul class="gallery cycle-slideshow" data-cycle-slides="li">
-  {% for image in page.images %}
-    <li style="background-image: url({{image.image_path}})"><span>{{image.caption}}</span></li>
-  {% endfor %}
-</ul>
+        <header>
+            <h1>Hello, my name is Mike Neumegen</h1>
+        </header>
+        <section class="content">
+            <div class="videos">
+	<p>
+		<video autoplay loop muted>
+			<source src="./videos/banana.mp4" type="video/mp4">
+			<source src="./videos/banana.ogv" type="video/ogg">
+		</video>
+
+		<video autoplay loop muted>
+			<source src="./videos/apple.mp4" type="video/mp4">
+			<source src="./videos/apple.ogv" type="video/ogg">
+		</video>
+	</p>
+	<p>
+		<video autoplay loop muted class="clear">
+			<source src="./videos/lemon.mp4" type="video/mp4">
+			<source src="./videos/lemon.ogv" type="video/ogg">
+		</video>
+
+		<video autoplay loop muted>
+			<source src="./videos/cupcake.mp4" type="video/mp4">
+			<source src="./videos/cupcake.ogv" type="video/ogg">
+		</video>
+	</p>
+</div>
+
+<p style="text-align:center" class="clear">I'm currently working on <a href="http://cloudcannon.com">CloudCannon</a> and <a href="https://www.facebook.com/mikeneumegen">Mike Neumegen Photography</a>. Sometimes I post on <a href="https://twitter.com/mikeneumegen">Twitter</a>.</p>
+
+        </section>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="./js/main.js"></script>
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-35170526-1']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+
+</script>
+    </body>
+</html>
