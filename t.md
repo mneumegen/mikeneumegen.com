@@ -2,7 +2,7 @@
 ---
 
 
-1. **Acceptance of Terms of Service**.
+2. **Acceptance of Terms of Service**.
 
    1. By using the Services in any manner, including but not limited to visiting or browsing the Services.
 
