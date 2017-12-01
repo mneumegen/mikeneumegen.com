@@ -1,6 +1,0 @@
-language: ruby
-rvm:
-  - 2.2
-install: bundle install
-before_script: sleep 30
-script: bundle exec jekyll build
