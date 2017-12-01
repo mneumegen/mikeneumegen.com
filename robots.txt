@@ -1,2 +1,0 @@
-User-agent: *
-Sitemap: https://orchid-heron.cloudvent.net/sitemap.xml
