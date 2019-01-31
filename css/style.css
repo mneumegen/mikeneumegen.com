@@ -1,0 +1,71 @@
+body {
+    color: #444;
+    font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",sans-serif;
+    line-height: 1.45em;
+}
+
+p, ul {
+    font-size: 1.3em;
+    line-height: 1.5em;
+}
+
+h1 {
+    text-align: center;
+    font-weight: normal;
+    font-size: 1.6em;
+}
+
+
+a {
+    color: rgb(51, 202, 223);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(21, 140, 183);
+}
+
+table {
+    margin: 0 auto;
+}
+
+video {
+    height: 300px;
+    width: 300px;
+    display: inline;
+    padding: 0;
+    margin: 0;
+}
+
+.videos p {
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+    font-size: 0;
+    text-align: center;
+}
+
+.content {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h3 {
+    margin: .64em 0 0 0;
+    font-weight: normal;
+    font-size: 1.37em;
+}
+
+iframe {
+    border: 0;
+}
+
+.center-text {
+    text-align: center;
+    display: block;
+}
+
+.clear {
+    clear: both;
+}
