@@ -1,0 +1,70 @@
+<meta property="og:site_name" content="{{ site.site_name }}">
+<!-- Page description for SEO -->
+{% if description %}
+  <meta name="description" content="{{ description }}">
+  <meta property="og:description" content="{{ description }}" />
+  <meta property="twitter:description" content="{{ description }}" />
+{% elsif summary %}
+	<meta name="description" content="{{ summary }}">
+  <meta property="og:description" content="{{ summary }}" />
+  <meta property="twitter:description" content="{{ summary }}" />
+{% else %}
+  <meta name="description" content="{{ site.description }}">
+  <meta property="og:description" content="{{ site.description }}" />
+  <meta property="twitter:description" content="{{ site.description }}" />
+{% endif %}
+
+<!--  Meta tags for open graph and twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="{{ site.twitter_site }}" />
+
+{% if title %}
+  <meta name="og:title" content="{{ title }}" />
+  <meta name="twitter:title" content="{{ title }}" />
+{% else %}
+  <meta name="og:title" content="{{ site.site_title }}" />
+  <meta name="twitter:title" content="{{ site.site_title }}" />
+{% endif %}
+
+{% if seo.open_graph_type %}
+  <meta property="og:type" content="{{ seo.open_graph_type }}" />
+{% else %}
+  <meta property="og:type" content="website" />
+{% endif %}
+
+{% if seo.featured_image %}
+  <meta name="og:image" content="{{ seo.featured_image }}" />
+  <meta name="twitter:image" content="{{ seo.featured_image }}" />
+  <meta name="twitter:image:alt" content="{{ seo.featured_image_alt }}" />
+{% elsif image.path %}
+  <meta name="og:image" content="{{ image.path }}" />
+  <meta name="twitter:image" content="{{ image.path }}" />
+  <meta name="twitter:image:alt" content="{{ image.alt }}" />
+{% elsif image %}
+  <meta name="og:image" content="{{ image }}" />
+  <meta name="twitter:image" content="{{ image }}" />
+{% else %}
+  <meta name="og:image" content="{{ site.image }}" />
+  <meta name="twitter:image" content="{{site.image }}" />
+  <meta name="twitter:image:alt" content="{{site.image_alt }}" />
+{% endif %}
+
+{% if author %}
+    {% assign person = collections.authors | where: "data.uuid", author | first %}
+    {% if person.data.twitter_handle %}
+        <meta name="twitter:creator" content="{{ person.data.twitter_handle }}" />
+    {% else %}
+        <meta name="twitter:creator" content="{{ site.twitter_site }}" />
+    {% endif %}
+{% else %}
+    <meta name="twitter:creator" content="{{ site.twitter_site }}" />
+{% endif %}
+
+<!--  Canonical URL for SEO -->
+{% if seo.canonical_url %}
+  <meta property="og:url" content="{{ site.site_url }}{{ seo.canonical_url | url }}" />
+  <link rel="canonical" href="{{ site.site_url }}{{ seo.canonical_url | url }}" />
+{% else %}
+  <meta property="og:url" content="{{ site.site_url }}{{ page.url | url }}" />
+  <link rel="canonical" href="{{ site.site_url }}{{ page.url | url }}" />
+{% endif %}

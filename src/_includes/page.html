@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>{{ title }} | Mike Neumegen</title>
+		{% include 'seo.html' %}
+		<meta http-equiv="x-ua-compatible" content="ie=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;600&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="/style.css" />
+	</head>
+
+	<body class="bg-slate-50 overflow-x-clip subpixel-antialiased">
+		<div class="max-w-4xl mx-auto px-4">
+			{{ content }}
+			<footer class="flex justify-center mt-24 mb-5 gap-x-2">
+				<a target="_blank" href="https://twitter.com/mikeneumegen" class="group">{{ '/src/images/twitter.svg' | svgContents: 'stroke-slate-300 group-hover:stroke-slate-500 transition-all w-8' }}</a>
+				<a target="_blank" href="https://www.linkedin.com/in/mikeneumegen/" class="group">{{ '/src/images/linkedin.svg' | svgContents: 'stroke-slate-300 group-hover:stroke-slate-500 transition-all w-8' }}</a>
+			</footer>
+		</div>
+	</body>
+</html>

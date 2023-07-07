@@ -1,0 +1,34 @@
+---
+title: Home
+layout: page.html
+---
+
+<div>
+	<div class="pt-20 md:pt-20 lg:pt-28 xl:pt-32 2xl:pt-40 md:flex">
+		<div class="col prose flex justify-end flex-col">
+			<h1 class="text-5xl">Hello, I'm Mike. </h2>
+			<p class="text-xl">I champion simplicity, collaboration, and, above all, a sustainable, people-first work culture. 
+				Cofounder and CEO of <a href="https://cloudcannon.com" target="_blank">CloudCannon</a>, a cutting-edge content management platform bringing
+				developers and content editors together.</p>
+		</div>
+		<div class="col shrink-0 mt-12">
+			<img src="/images/mike.jpg" alt="Mike Neumegen" width="400" class="block mx-auto hover:grayscale transition-all duration-[5000ms]" />
+		</div>
+	</div>
+
+	<div class="mt-28">
+		<h2 class="text-3xl mb-6"> Latest </h2>
+		<ul class="">
+			{% assign writings_sorted = collections.writings | sort: "data.date" | reverse %}
+			{% for writing in writings_sorted %}
+				<li class="flex items-start pb-3 text-lg text-slate-700">
+					<img class="relative top-1" width="25" src="https://v1.indieweb-avatar.11ty.dev/{{ writing.data.external_link | url_encode }}"> 
+					<a target="_blank" href="{{ writing.data.external_link }}" class="ml-1 group">
+						<span>{{ writing.data.title }}</span> 
+						{{ '/src/images/link.svg' | svgContents: "w-4 ml-2 stroke-slate-300 group-hover:stroke-slate-500 transition-all inline" }}
+					</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>
