@@ -3,7 +3,9 @@
     "clean": "del _site",
     "dev:styles": "TAILWIND_MODE=WATCH npx postcss src/styles/tailwind.pcss -o _site/style.css --config src/styles/ --watch",
     "dev:11ty": "eleventy --serve --watch",
-    "start": "run-p dev:*"
+    "start": "run-p dev:*",
+    "build:styles": "NODE_ENV=production npx postcss src/styles/tailwind.pcss -o _site/style.css --config src/styles/",
+    "build": "run-s build:* "
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.0",
