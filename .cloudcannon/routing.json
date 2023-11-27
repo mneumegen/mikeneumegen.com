@@ -1,0 +1,13 @@
+{
+  "headers": [
+    {
+      "match": "/*",
+      "headers": [
+        {
+          "name": "strict-transport-security",
+          "value": "max-age=63072000; includeSubDomains; preload"
+        }
+      ]
+    }
+  ]
+}
